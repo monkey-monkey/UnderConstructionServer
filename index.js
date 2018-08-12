@@ -6,9 +6,9 @@ var app = express();
 app.listen(8080);
 app.use(express.static(path.join(__dirname, "./assets")));
 
-var caPath = path.join(__dirname, "../../MonkeyWebConfig/ca_bundle.crt");
-var keyPath = path.join(__dirname, "../../MonkeyWebConfig/private.key");
-var certPath = path.join(__dirname, "../../MonkeyWebConfig/certificate.crt");
+var caPath = path.join(__dirname, "../MonkeyWebConfig/ca_bundle.crt");
+var keyPath = path.join(__dirname, "../MonkeyWebConfig/private.key");
+var certPath = path.join(__dirname, "../MonkeyWebConfig/certificate.crt");
 
 if (fs.existsSync(caPath) && fs.existsSync(keyPath) && fs.existsSync(certPath)) {
     var credentials = {
