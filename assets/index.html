@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #ffffff;
+      padding-top: 8%;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+    }
+
+    h1 {
+      color: #ff6f00;
+    }
+
+    h3 {
+      color: rgba(70, 70, 70, 0.5);
+    }
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
+    .loader {
+      border: 16px solid rgba(255, 255, 255, 0);
+      border-radius: 50%;
+      border-top: 16px solid #fbc02d;
+      border-bottom: 16px solid #fbc02d;
+      width: 400px;
+      height: 400px;
+      animation: spin 5s linear infinite;
+      position: absolute;
+    }
+
+    .stack {
+      padding-top: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media only screen and (min-height: 1280px) {
+      .stack {
+        padding-top: 50%;
+      }
+
+      .loader {
+        margin-top: 40%;
+        width: 600px;
+        height: 600px;
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stack">
+    <img src="favicon.ico">
+    <h1>ปิดปรับปรุง Website</h1>
+    <h3>ลองใหม่อีกครั้งในวันที่ 14/08/18</h3>
+  </div>
+  <div class="loader"></div>
+</body>
+
+</html>
