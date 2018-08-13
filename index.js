@@ -22,3 +22,5 @@ if (fs.existsSync(caPath) && fs.existsSync(keyPath) && fs.existsSync(certPath)) 
         res.redirect("https://" + req.hostname + req.url);
     })).listen(80);
 }
+
+app.get("*", (_, res) => res.sendFile(path.join(__dirname, "./assets/index.html")));
