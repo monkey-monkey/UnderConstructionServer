@@ -23,4 +23,4 @@ if (fs.existsSync(caPath) && fs.existsSync(keyPath) && fs.existsSync(certPath)) 
     })).listen(80);
 }
 
-app.get("*", (_, res) => res.sendFile(path.join(__dirname, "./assets/index.html")));
+app.all("*", (_, res) => res.sendFile(path.join(__dirname, "./assets/index.html")));
